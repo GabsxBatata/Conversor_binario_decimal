@@ -1,17 +1,11 @@
 
 *{
-	font-family: "MedievalSharp", cursive;
+	font-family: "MedievalSharp", cursive, sans-serif;
+	
 }
 
 .center{
 	text-align: center;
-}
-
-
-#decimal{
-	font-size: 2em;
-	margin: 0 auto;
-	width: 25%;
 }
 
 [type = submit]{
@@ -30,14 +24,29 @@
 	width: 20%;
 	line-height: 25px;
 	margin: 5px;
+	min-width: 200px;
 }
+
+#decimal{
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.2em;
+	padding: 10px;
+	border: 1px solid gray;
+	border-radius: 5px;
+	width: 20%;
+	line-height: 25px;
+	margin: 5px;
+	
+}
+
 [type=text]:focus {
 	outline: 0;
 }
 
 ::placeholder{
 	text-align: center;
-	font-size: 0.8em;
+	font-size: 1em;
 }
 
 [type = reset]{
