@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>Testes JavaScript</title>
+</head>
+
+<body>
+
+    <h1 class="center">CONVERSOR DE BINARIO PARA DECIMAL</h1>
+    <p class="center">Informe o numero para conversão de Binario para decimal</p>
+
+    <form class="center">
+        <input type="text" id="binario" placeholder="Binário" size="1" maxlength="8" onchange="converter(this.value)"
+            oninput="this.value = this.value.replace(/[^0-9.]/g, ''), this.value = this.value.replace(/[2-9.]/g, '')"
+            autocomplete="off"><br>
+        <input type="text" class="center" id="decimal" placeholder="Resultado aqui" readonly><br>
+        <input type="reset" value="Resetar">
+    </form>
+
+
+    <script>
+        // PRIMEIRO PROJETO - CONVERSOR DE BINARIO PARA DECIMAL
+
+        //Função para converter o valor recebido (binário) para decimal
+        function converter(valorDigitado) {
+            let bin = valorDigitado //criando a variavel com o valor recebido no input binário
+            let dec = 0 // definindo e criando a variavel decimal para o valor 0
+            for (let c = 0; c < bin.length; c++) dec += Math.pow(2, c) * bin[bin.length - c - 1] //loop para que a conta sejá resolvida começando pela direita para a esquerda
+            document.getElementById("decimal").value = dec //retornar a variavel dec para o id decimal no html e com o innerHTML, mostrando o valor
+        }
+
+    </script>
+</body>
+
+</html>
